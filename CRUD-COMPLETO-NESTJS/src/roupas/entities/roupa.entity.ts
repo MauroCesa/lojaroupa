@@ -18,9 +18,9 @@ export class Roupa {
     @Column({length: 50})
     cor: string
 
-    @Column({length: 50})
+    @Column()
     custo: number
 
-    @Column({length: 50})
+    @Column()
     promocao: number
 }

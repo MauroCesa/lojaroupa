@@ -10,6 +10,8 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { UsersController } from './users/users.controller';
 import { Roupa } from './roupas/entities/roupa.entity';
+import { UsersService } from './users/users.service';
+import { User } from './users/entities/user.entity';
 
 @Module({
   imports: [UsersModule, PostagemModule, DatabaseModule,
@@ -20,11 +22,11 @@ import { Roupa } from './roupas/entities/roupa.entity';
       username: 'root',
       password: '',
       database: 'lojaroupa',
-      entities: [Roupa],
+      entities: [Roupa, User],
       synchronize: true,
     }), RoupasModule
   ],
-  controllers: [RoupasController,  AppController,],
-  providers: [AppService, RoupasService],
+  controllers: [RoupasController,  AppController, UsersController],
+  providers: [AppService, RoupasService, UsersService],
 })
 export class AppModule {}

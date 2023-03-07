@@ -1,7 +1,5 @@
-
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-
-// PADRÃO DE CARACTERÍSTICAS, QUE É DE ONDE NASCEM AS TABELAS DO BANCO DE DADOS
+import { IsNotEmpty } from "class-validator"
+import { Column, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 
 @Entity()
 export class User {
